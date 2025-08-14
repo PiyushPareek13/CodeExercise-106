@@ -10,6 +10,7 @@ public class EmployeeService {
     public Map<Integer, Employee> loadEmployees(Path filePath) throws IOException {
         Map<Integer, Employee> employees = new HashMap<>();
 
+        //Load data from CVS file
         try (BufferedReader br = Files.newBufferedReader(filePath)) {
             String line;
             br.readLine(); // skip header
